@@ -13,10 +13,16 @@
     <div class="row">
 
         {% if articles %} {% for article in articles %}
-        <div class="col-sm-6 col-md-3">
-            <h1>{{article.title}}</h1>
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <h1 class="text-center"> {{ article.title }} </h1>
+            <p class="text-center"> {{ article.post }}</p>
+            <h2 class="text-center"> {{ article.editor }} </h2>
+        </div>
 
-
+        <!--Display news Article images  -->
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <img src="{{article.article_image.url}}" class="img-responsive" alt="Image">
+            <h3 class="text-center"> {{ article.pub_date }} </h3>
         </div>
         {% endfor %} {% endif %}
     </div>

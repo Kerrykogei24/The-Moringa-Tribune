@@ -13,3 +13,5 @@ class NewArticleForm(forms.ModelForm):
         widgets = {
             'tags': forms.CheckboxSelectMultiple(),
         }
+
+        
